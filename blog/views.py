@@ -26,7 +26,7 @@ def nuevo_pub(request):
     return render(request, 'blog/nuevo_pub.html', {'form': form})
 
 def editar_pub(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(Publicacion, pk=pk)
     if request.method == "POST":
         form = FormPub(request.POST, instance=post)
         if form.is_valid():

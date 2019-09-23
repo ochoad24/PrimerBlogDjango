@@ -1,12 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<a class="btn btn-success" href="{% url 'editar_pub' pk=pub.pk %}">Editar</a>
 <div class="post">
     <div class="date">
         {{ pub.fecha_publicacion }}
     </div>
     <h1><a href="{% url 'detalle_pub' pk=pub.pk %}">{{ pub.titulo }}</a></h1>
     <p>{{ pub.texto|linebreaksbr }}</p>
+    <a class="btn btn-success" href="{% url 'editar_pub' pk=pub.pk %}">Editar</a>
 </div>
 {% endblock %}
